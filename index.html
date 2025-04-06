@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="external.js"></script>
+</head>
+<body>
+    <div class="add-task-container">
+        <input type="text" class="add-task-input" id="newTaskInput" placeholder="Go to Place">
+        <button class="add-btn" id="addTaskBtn">Add</button>
+    </div>
+    
+    <table class="task-table">
+        <thead>
+            <tr>
+                <th style="width: 15%">Done</th>
+                <th style="width: 70%">Task</th>
+                <th style="width: 15%">Delete</th>
+            </tr>
+        </thead>
+        <tbody id="taskList">
+            <tr>
+                <td style="text-align: center;"><input type="checkbox" checked></td>
+                <td class="completed">Study Js Course</td>
+                <td style="text-align: center;"><button class="delete-btn">delete</button></td>
+            </tr>
+            <tr>
+                <td style="text-align: center;"><input type="checkbox"></td>
+                <td>Practise JS More</td>
+                <td style="text-align: center;"><button class="delete-btn">delete</button></td>
+            </tr>
+            <tr>
+                <td style="text-align: center;"><input type="checkbox"></td>
+                <td>Go to Gym</td>
+                <td style="text-align: center;"><button class="delete-btn">delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <!-- Delete confirmation modal -->
+    <div class="modal" id="deleteModal">
+        <div class="modal-content">
+            <h3 class="modal-header">This page says</h3>
+            <p class="modal-message">Are U Sure to delete this task</p>
+            <div class="modal-buttons">
+                <button class="ok-btn" id="confirmDelete">OK</button>
+                <button class="cancel-btn" id="cancelDelete">Cancel</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
